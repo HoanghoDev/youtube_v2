@@ -1,0 +1,178 @@
+@import url('https://fonts.cdnfonts.com/css/seri-ea');
+/* 1200 x 780 */
+body{
+    margin: 0;
+    font-size: 15px;
+    background-color: darkslategray;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+svg{
+    color: #fff;
+}
+:root{
+    --width-default: min(1200px, 90vw);
+    --diameter: 1432px;
+}
+.logo img{
+    width: 50px;
+}
+header{
+    width: var( --width-default);
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.slider{
+    background-color: red;
+    color: #eee;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: -70px;
+}
+.slider .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.slider .list .item .content{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.slider .list .item .content h2{
+    font-size: 10vw;
+    font-family: 'Seri EA', sans-serif;
+    transform: translateY(-100%);
+    color: #ececec;
+    transition: transform 1s;
+    letter-spacing: 2vw;
+}
+/* item default */
+.slider .list .item .image{
+    flex-shrink: 0;
+    width: var(--diameter);
+    height: var(--diameter);
+    background-image: var(--url);
+    background-size: var(--diameter) var(--diameter);
+    background-position: center;
+    border-radius: 50%;
+    transform: rotate(-60deg);
+    position: relative;
+    transition: 1s;
+}
+.slider .list .item .image::before, 
+.slider .list .item .image::after{
+    position: absolute;
+    background-color: red;
+    width: 70%;
+    height: 70%;
+    content: '';
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)  rotate(-120deg);
+    background-image: 
+    linear-gradient(to right, #0004, #0004),
+    var(--url);
+    background-size: var(--diameter) var(--diameter);
+    background-position: center;
+    transition: 1s;
+}
+.slider .list .item .image::after{
+    width: 30%;
+    height: 30%;
+    background-image: var(--url);
+    border: 3px solid #fff2;
+    transform: translate(-50%, -50%) rotate(-170deg);
+}
+
+.slider .list .item{
+    pointer-events: none;
+    opacity: 0;
+}
+/* item active */
+.slider .list .item.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+.slider .item.active .image{
+    transform: rotate(0deg);
+}
+.slider .item.active .image::before,
+.slider .item.active .image::after
+{
+    transform: translate(-50%, -50%) rotate(0deg) ;
+}
+.slider .list .item.active .content h2{
+    transform: translateY(0);
+}
+
+/* item phía sau */
+.slider .list .item.active ~ .item{
+    opacity: 0;
+}
+.slider .item.active ~ .item .image{
+    transform: rotate(60deg);
+}
+.slider .item.active ~ .item .image::before
+{
+    transform: translate(-50%, -50%) rotate(120deg) ;
+}
+.slider .item.active ~ .item .image::after
+{
+    transform: translate(-50%, -50%) rotate(170deg) ;
+}
+.slider .list .item.active ~ .item .content h2{
+    transform: translateY(100%);
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: var(--width-default);
+    display: flex;
+    justify-content: space-between;
+}
+.arrows button{
+    all: unset;
+    cursor: pointer;
+}
+.slider .list::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: min(1000px, 100vw);
+    height: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(img/model.png);
+    background-size: cover;
+    background-position: top;
+    pointer-events: none;
+}
+
+.arrows button.d-none{
+    opacity: 0;
+    pointer-events: none;
+}
