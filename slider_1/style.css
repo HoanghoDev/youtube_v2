@@ -32,7 +32,7 @@ header{
     z-index: 1;
 }
 .slider{
-    background-color: red;
+    /* background-color: red; */
     color: #eee;
     width: 100vw;
     height: 100vh;
@@ -98,7 +98,6 @@ header{
 .slider .list .item .image::before, 
 .slider .list .item .image::after{
     position: absolute;
-    background-color: red;
     width: 70%;
     height: 70%;
     content: '';
@@ -121,6 +120,11 @@ header{
     transform: translate(-50%, -50%) rotate(-170deg);
 }
 
+/* default  */
+.slider .list .item .image{
+    filter: blur(30px);
+}
+
 .slider .list .item{
     pointer-events: none;
     opacity: 0;
@@ -131,6 +135,7 @@ header{
     opacity: 1;
 }
 .slider .item.active .image{
+    filter: blur(0px);
     transform: rotate(0deg);
 }
 .slider .item.active .image::before,
@@ -186,6 +191,12 @@ header{
     background-size: cover;
     background-position: top;
     pointer-events: none;
+    animation: showModel 1s ease-in-out 1 forwards;
+}
+@keyframes showModel{
+    from{
+        transform: translateX(-50%) scale(1.3) translateY(88px);
+    }
 }
 
 .arrows button.d-none{
