@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/seri-ea');
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
 /* 1200 x 780 */
 body{
     margin: 0;
@@ -56,15 +56,31 @@ header{
     width: max-content;
     max-width: 100%;
     text-align: center;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    text-align: left;
+    gap: 80px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: Poppins;
+    text-shadow: 0 0 80px #000;
 }
 .slider .list .item .content h2{
-    font-size: 10vw;
-    font-family: 'Seri EA', sans-serif;
+    font-size: 10em;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 0.9em;
     transform: translateY(-100%);
-    color: #ececec;
     transition: transform 1s;
-    letter-spacing: 2vw;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.slider .list .item .content p{
+}
+.slider .list .item .content p:last-child{
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-bottom: 25px;
 }
 /* item default */
 .slider .list .item .image{
@@ -175,4 +191,26 @@ header{
 .arrows button.d-none{
     opacity: 0;
     pointer-events: none;
+}
+@media all and (max-width: 1024px) {
+    .slider .list .item .content{
+        grid-template-columns: repeat(2, 300px);
+    }
+    .slider .list .item .content h2{
+        font-size: 8em;
+    }
+}
+@media all and (max-width: 767px) {
+    .slider .list .item .content{
+        grid-template-columns: 80%;
+        justify-content: center;
+        gap: 20px;
+        top: 70px;
+    }
+    .slider .list .item .content h2{
+        font-size: 4em;
+    }
+    .slider .list .item .content p{
+        font-size: small;
+    }
 }
