@@ -1,0 +1,148 @@
+@import url('https://fonts.cdnfonts.com/css/lt-galaxy-reverse');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #d5d5d5;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+main{
+    background-color: #eeeef0;
+    width: min(1200px, 90vw);
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0 30px 30px #cfcfcf;
+}
+.description img{
+    width: 100%;
+}
+.detail{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.detail img{
+    width: 100%;
+}
+.detail h2{
+    font-size: 2em;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.detail ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    grid-template-rows: repeat(auto-fill, 50px);
+    gap: 20px;
+}
+.detail ul li{
+    background-color: #ebe8e8;
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: box-shadow 0.5s;
+}
+.detail .price img{
+    width: 33px;
+}
+.detail .price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 3em;
+    font-weight: 500;
+    font-family: 'LT Galaxy Reverse', sans-serif;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 170px);
+    gap: 20px;
+}
+.buttons button{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #0e0c0d;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: small;
+    padding: 10px 0;
+    border-radius: 5px;
+
+}
+.detail .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.detail .content .des{
+    font-size: small;
+    font-family: Poppins;
+}
+.detail b{
+    font-family: Poppins;
+    font-weight: 500;
+}
+.detail li.active{
+    border: 4px solid #fff;
+    box-shadow: 0 10px 50px #555;
+}
+/* #title,
+#description,
+#colors,
+#sizes,
+#price{
+    border: 1px solid red;
+    position: relative;
+    --content: '#price';
+    width: max-content;
+    min-width: 100px;
+    max-width: 400px;
+    min-height: 40px;
+}
+#description{
+    --content: '#description';
+}
+#colors{
+    --content: '#colors';
+}
+#sizes{
+    --content: '#sizes';
+}
+#colors{
+    --content: '#colors';
+}
+#title{
+    --content: '#title';
+}
+#title::after,
+#description::after,
+#colors::after,
+#sizes::after,
+#price::after{
+    content: var(--content);
+    position: absolute;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    bottom: 100%;
+    right: 0;
+    pointer-events: none;
+} */
