@@ -1,0 +1,96 @@
+body{
+    color: #eee;
+    font-family: Poppins;
+    margin: 0;
+    background-image:
+    repeating-linear-gradient(
+        to right, #2d2a44 0 1px, transparent 2px 200px
+    ),
+    repeating-linear-gradient(
+        to bottom, #2d2a44 0 1px, transparent 2px 200px
+    ),
+    radial-gradient(
+        at 50% 50%, #2d2a44, #1d1b34
+    );
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+header img{
+    width: 30px;
+}
+header{
+    width: min(1200px, 90vw);
+    margin: auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    gap: 30px;
+}
+main{
+}
+main .banner{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: -70px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+}
+.banner button{
+    all: unset;
+    border: 1px solid #afaeae55;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(
+        to bottom, #eee1, transparent, #eee1
+    );
+    cursor: pointer;
+    transition: 0.5s;
+}
+.banner button:hover{
+    background-color: #c691e6;
+    color: #040018;
+    box-shadow: 0 0 50px #c691e6;
+    
+}
+h1{
+    --to: left;
+    font-size: 4em;
+    font-weight: bold;
+    background-image: linear-gradient(
+        to var(--to), #89a5df, #e46e7f, #e8e191
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    line-height: 1em;
+
+}
+h1.right{
+    --to: right;
+}
+
+.banner{
+    position: relative;
+}
+.banner #dotCanvas{
+    position: absolute;
+    inset: 0 0 0 0;
+    pointer-events: none;
+}
