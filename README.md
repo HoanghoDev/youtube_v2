@@ -8,3 +8,5 @@
 ![jAVASCRIPT (1)](https://github.com/HoanghoDev/youtube_v2/assets/110652388/06d3632f-cb25-4445-8702-3ce4a3da7a08)
 # add-to-cart-react
 ![jAVASCRIPT (3)](https://github.com/HoanghoDev/youtube_v2/assets/110652388/0542e5bc-cc49-41e3-ba61-7501618dceea)
+# auto_slider
+![jAVASCRIPT (1)](https://github.com/HoanghoDev/youtube_v2/assets/110652388/4c52c19b-f554-46cb-b6eb-0a593a5e5101)
