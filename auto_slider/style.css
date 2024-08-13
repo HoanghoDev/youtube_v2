@@ -31,7 +31,7 @@ main{
     left: 100%;
     animation: autoRun 10s linear infinite;
     transition: filter 0.5s;
-    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
 }
 .slider .list .item img{
     width: 100%;
