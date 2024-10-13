@@ -18,5 +18,5 @@
 ![3D_animation_css_ook](https://github.com/HoanghoDev/youtube_v2/assets/110652388/37d37bb8-6a67-4eb0-810f-ffa1a3a47acb)
 # ThreeJs-Animation-Scroll
 ![three js animation](https://github.com/user-attachments/assets/6e50e534-9839-452a-8760-f4c82c48c60a)
-# gsap_animation_building
+# gsap_animation
 <img width="1920" alt="finish" src="https://github.com/user-attachments/assets/2bc383ff-766d-47d4-bee2-251a80a4cdbb">
