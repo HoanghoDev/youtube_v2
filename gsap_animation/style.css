@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/allenia');
+
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: Poppins;
+    color: #eee;
+}
+
+:root {
+    --width: min(1200px, 100%);
+}
+
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: var(--width);
+    margin: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    padding-inline: 20px;
+}
+
+header .logo img {
+    height: 30px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2em;
+}
+
+header nav ul li.active {
+    border-bottom: 1px solid #eee8;
+}
+
+#bg_city {
+    margin-top: -50px;
+}
+
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+}
+
+.banner .content {
+    position: absolute;
+    width: var(--width);
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 10vh 40vh 20vh;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5em;
+    gap: 5em;
+    position: relative;
+}
+
+main::after {
+    width: 100%;
+    height: 100px;
+    content: '';
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: 100%;
+    background-image: linear-gradient(to top, #000, #0000);
+}
+
+.friend {
+    width: var(--width);
+    padding-inline: 20px;
+}
+
+.friend ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.banner .content .item:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.banner .content .item:nth-child(1) div:nth-child(2) {
+    text-align: right;
+}
+
+.banner .title {
+    text-align: center;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Allenia', sans-serif;
+}
+
+.banner .title p {
+    margin: 0;
+    padding: 0;
+}
+
+.friend ul img {
+    height: 50px;
+}
+
+.me {
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.me h1,
+.me h2 {
+    font-weight: 500;
+}
+
+.me h1 {
+    font-size: 4em;
+}
+
+.me h2 {
+    font-size: 4em;
+}
+
+.lorem {
+    padding-inline: 20px;
+    width: var(--width);
+    columns: 400px 2;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .me h1,
+    .me h2 {
+        font-size: 3em;
+    }
+    .banner .title {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .me h1,
+    .me h2 {
+        font-size: 2em;
+    }
+}
+#bg_city {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+#bg_city svg {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
