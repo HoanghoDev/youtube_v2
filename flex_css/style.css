@@ -1,0 +1,192 @@
+:root{
+    --green: #3BE798;
+    --violet: #7F6EB2;
+    --color-item: #2B2B2B;
+}
+body{
+    height:100vh;
+    overflow: hidden;
+    background-color: #dadad8;
+    font-family: system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div[class*='new'] .img {
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+div[class^="card"]{
+    border-radius: 30px;
+    width:300px;
+    background-color: var(--color-item);
+}
+.basicInfo{
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    padding:25px;
+    position: relative;
+}
+.title .category,
+.title .info{
+    font-weight: 600;
+    font-size: x-small;
+}
+.title .name{
+    font-weight: bold;
+    font-size: large;
+    padding-bottom:3px;
+}
+div[class^="card"] .img{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+div[class^="card"] .img img{
+    height:200px;
+    transform: scale(1) rotate(20deg);
+    transition: 0.5s;
+}
+div[class^="card"] .img::before{
+    position: absolute;
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    content:'';
+    transform: translate(-50%,-50%);
+    background-color: #e7e7e7;
+    z-index: -2;
+    top:50%;
+    left:50%;
+}
+div[class^="card"] .img::after{
+    position: absolute;
+    bottom:0;
+    width: 70%;
+    height:40px;
+    background-color: #000;
+    content:'';
+    right:30px;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.2;
+    filter:blur(10px);
+    transition: 0.5s;
+}
+.colors{
+    display: flex;
+    font-size: xx-small;
+    text-align: center;
+    gap: 1em;
+}
+.colors .name{
+    margin-bottom:5px;
+}
+.colors .ellipse{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mores{
+    padding:25px;
+}
+.mores .stars,
+.mores .price{
+    display: inline-block;
+}
+.mores .price{
+    float: right;
+    color:#eee;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.mores .stars{
+    color:#9b9a9a;
+}
+.text-yellow{
+    color:rgb(209, 209, 6);
+}
+.addCard{
+    position: absolute;
+    width:100%;
+    bottom:0;
+}
+.addCard i{
+    position: absolute;
+    width:50px;
+    height:50px;
+    background-color: var(--green);
+    color:#222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right:90px;
+    bottom:-25px;
+    border:5px solid var(--color-item);
+    transition: 0.5s;
+    opacity: 0;
+    transform: translate(0,10px);
+}
+.addCard::after,
+.addCard::before{
+    position: absolute;
+    bottom:0;
+    background-color: transparent;
+    width:47px;
+    height:38px;
+    content:'';
+    right:46px;
+    border-bottom-left-radius: 55%;
+    opacity: 0;
+    transform: translate(0,20px);
+    box-shadow: 0 20px 0 0 var(--color-item);
+    transition: 0.5s;
+}
+.addCard::after{
+    right:unset;
+    left:107px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 55%;
+}
+/* animation */
+div[class^="card"]:hover .img img{
+    transform: scale(1.2) rotate(30deg) translate(10px, -20px);
+}
+div[class^="card"]:hover .img::after{
+    width:90%;
+
+}
+div[class^="card"]:hover .addCard i,
+div[class^="card"]:hover .addCard::before,
+div[class^="card"]:hover .addCard::after{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+
+
+div[class^='card'][class*='new'] .img {
+    background-image: url(img/new.webp);
+}
+div[class^='card'][class*='seller'] {
+    --color-item: #f26a5f;
+}
+div[class^='card'][class*='out'] {
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+div[class^='card'][class$='prioritize']:not([class*='out']) {
+    order: -1;
+}
